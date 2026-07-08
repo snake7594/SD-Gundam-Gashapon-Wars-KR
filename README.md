@@ -35,3 +35,21 @@
 
 ---
 *비영리 팬 번역. 게임의 모든 권리는 원저작권자에게 있습니다.*
+
+---
+
+## 저장소 구성 (소스 · 번역 데이터 포함)
+
+이 저장소에는 패치 제작에 사용한 **전체 파이프라인 소스와 번역 데이터**가 포함되어 있습니다.
+(게임 원본 ISO·추출 파일 등 저작물은 포함하지 않습니다.)
+
+- `src/text_patch_work/` — 추출→번역→인코딩→주입 전 과정 스크립트(`01`~`48`, `spb_lib.py`, `vsc_lib.py`)와
+  번역 데이터(`ko_final.json` 대사, `dol_ko.json`/`dol_inject_all.json` 시스템 UI, `help_final.json` 도움말,
+  `disp_map.json` 캐릭터·지형명, `unit_name_map.json`, `carrier_map.json` 폰트 매핑 등), 용어집·번역지침.
+  - 각 단계 설명: `src/text_patch_work/BUILD_README.md`
+- `src/kanji_dokuon_auto_patch_tool/` — 한자→한글 독음 폰트 자동 패치 도구.
+- `SDGundamGashaponWars_KR_v1.0.xdelta` — 배포용 패치(릴리즈 첨부와 동일).
+
+### 재현 방법(개발자용)
+1. 본인이 소유한 원본 ISO에서 게임 파일을 추출해 `files/`, `sys/` 로 배치.
+2. `src/text_patch_work/BUILD_README.md` 의 실행 순서대로 스크립트 실행.

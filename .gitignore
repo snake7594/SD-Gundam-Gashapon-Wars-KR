@@ -1,0 +1,24 @@
+# 게임 원본/추출/파생 데이터는 절대 커밋 금지 (저작물)
+*.iso
+*.dol
+*.thp
+*.adp
+*.sam
+*.brstm
+*.SPB
+*.vsc
+*.dat
+*.arc
+*.tpl
+*.bnr
+*.ARC
+*.sdi
+files/
+sys/
+patched_files/
+font_preview/
+patched_preview/
+auto_patch_work/
+font_candidates/
+__pycache__/
+*.pyc

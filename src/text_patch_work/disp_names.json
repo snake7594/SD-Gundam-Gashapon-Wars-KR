@@ -1,0 +1,257 @@
+[
+ {
+  "id": 0,
+  "jp": "アムロ",
+  "kind": "char"
+ },
+ {
+  "id": 1,
+  "jp": "シャア",
+  "kind": "char"
+ },
+ {
+  "id": 2,
+  "jp": "ブライト",
+  "kind": "char"
+ },
+ {
+  "id": 3,
+  "jp": "キシリア",
+  "kind": "char"
+ },
+ {
+  "id": 4,
+  "jp": "ギレン",
+  "kind": "char"
+ },
+ {
+  "id": 5,
+  "jp": "カミーユ",
+  "kind": "char"
+ },
+ {
+  "id": 6,
+  "jp": "ジェリド",
+  "kind": "char"
+ },
+ {
+  "id": 7,
+  "jp": "ハマーン",
+  "kind": "char"
+ },
+ {
+  "id": 8,
+  "jp": "シロッコ",
+  "kind": "char"
+ },
+ {
+  "id": 9,
+  "jp": "フォウ",
+  "kind": "char"
+ },
+ {
+  "id": 10,
+  "jp": "キラ",
+  "kind": "char"
+ },
+ {
+  "id": 11,
+  "jp": "クルーゼ",
+  "kind": "char"
+ },
+ {
+  "id": 12,
+  "jp": "バルトフェルド",
+  "kind": "char"
+ },
+ {
+  "id": 13,
+  "jp": "マリュー",
+  "kind": "char"
+ },
+ {
+  "id": 14,
+  "jp": "シン",
+  "kind": "char"
+ },
+ {
+  "id": 15,
+  "jp": "ボックス１",
+  "kind": "char"
+ },
+ {
+  "id": 16,
+  "jp": "ボックス２",
+  "kind": "char"
+ },
+ {
+  "id": 17,
+  "jp": "ボックス３",
+  "kind": "char"
+ },
+ {
+  "id": 18,
+  "jp": "ボックス４",
+  "kind": "char"
+ },
+ {
+  "id": 19,
+  "jp": "ボックス５",
+  "kind": "char"
+ },
+ {
+  "id": 20,
+  "jp": "プレイヤー",
+  "kind": "char"
+ },
+ {
+  "id": 1000,
+  "jp": "ガシャポリス",
+  "kind": "terrain"
+ },
+ {
+  "id": 1001,
+  "jp": "ガシャベース",
+  "kind": "terrain"
+ },
+ {
+  "id": 1002,
+  "jp": "街",
+  "kind": "terrain"
+ },
+ {
+  "id": 1003,
+  "jp": "都市",
+  "kind": "terrain"
+ },
+ {
+  "id": 1004,
+  "jp": "コロニー",
+  "kind": "terrain"
+ },
+ {
+  "id": 1005,
+  "jp": "空港",
+  "kind": "terrain"
+ },
+ {
+  "id": 1006,
+  "jp": "工場",
+  "kind": "terrain"
+ },
+ {
+  "id": 1007,
+  "jp": "基地",
+  "kind": "terrain"
+ },
+ {
+  "id": 1008,
+  "jp": "ボアズ",
+  "kind": "terrain"
+ },
+ {
+  "id": 1009,
+  "jp": "ヤキン・ドゥーエ",
+  "kind": "terrain"
+ },
+ {
+  "id": 1010,
+  "jp": "ソロモン",
+  "kind": "terrain"
+ },
+ {
+  "id": 1011,
+  "jp": "アクシズ",
+  "kind": "terrain"
+ },
+ {
+  "id": 1012,
+  "jp": "ソーラレイ",
+  "kind": "terrain"
+ },
+ {
+  "id": 1013,
+  "jp": "ジェネシス",
+  "kind": "terrain"
+ },
+ {
+  "id": 1014,
+  "jp": "ローエングリン",
+  "kind": "terrain"
+ },
+ {
+  "id": 1015,
+  "jp": "平地",
+  "kind": "terrain"
+ },
+ {
+  "id": 1016,
+  "jp": "山岳",
+  "kind": "terrain"
+ },
+ {
+  "id": 1017,
+  "jp": "山脈",
+  "kind": "terrain"
+ },
+ {
+  "id": 1018,
+  "jp": "森林",
+  "kind": "terrain"
+ },
+ {
+  "id": 1019,
+  "jp": "砂地",
+  "kind": "terrain"
+ },
+ {
+  "id": 1020,
+  "jp": "地雷原",
+  "kind": "terrain"
+ },
+ {
+  "id": 1021,
+  "jp": "雪原",
+  "kind": "terrain"
+ },
+ {
+  "id": 1022,
+  "jp": "海",
+  "kind": "terrain"
+ },
+ {
+  "id": 1023,
+  "jp": "機雷原",
+  "kind": "terrain"
+ },
+ {
+  "id": 1024,
+  "jp": "宇宙",
+  "kind": "terrain"
+ },
+ {
+  "id": 1025,
+  "jp": "大気圏",
+  "kind": "terrain"
+ },
+ {
+  "id": 1026,
+  "jp": "いん石",
+  "kind": "terrain"
+ },
+ {
+  "id": 1027,
+  "jp": "地表",
+  "kind": "terrain"
+ },
+ {
+  "id": 1028,
+  "jp": "クレーター",
+  "kind": "terrain"
+ },
+ {
+  "id": 1029,
+  "jp": "深海",
+  "kind": "terrain"
+ }
+]
