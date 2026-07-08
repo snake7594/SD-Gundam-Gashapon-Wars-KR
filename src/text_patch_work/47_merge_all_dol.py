@@ -32,23 +32,33 @@ for i, w in work.items():
         continue
     entries.append({'jp': w['jp'], 'ko': ko, 'occ': uniq[i]['occ'], 'budget': w['budget']})
 
-# set 2: the 226 missed
-missed = {m['id']: m for m in json.load(open(os.path.join(HERE, 'dol_missed.json'), encoding='utf-8'))}
-ko2 = {}
+# set 2: the missed multiline strings.
+# ⚠ dol_missed 재생성으로 id가 배치와 어긋날 수 있어 JP 기준으로 매칭한다.
+missed = json.load(open(os.path.join(HERE, 'dol_missed.json'), encoding='utf-8'))
+# 배치 jp <-> 출력 ko 를 id로 이어 jp->ko 맵 구성
+batch_jp = {}
+for k in range(5):
+    bp = os.path.join(HERE, 'dolm_batches', f'dolm_{k}.json')
+    if os.path.exists(bp):
+        for it in json.load(open(bp, encoding='utf-8')):
+            batch_jp[it['id']] = it['jp']
+jp2ko = {}
 for k in range(5):
     p = os.path.join(HERE, 'dolm_out', f'dolm_{k}.json')
     if os.path.exists(p):
         for it in json.load(open(p, encoding='utf-8')):
-            ko2[it['id']] = it['ko']
-for i, m in missed.items():
-    if i not in ko2:
+            jp = batch_jp.get(it['id'])
+            if jp is not None:
+                jp2ko[jp] = it['ko']
+seen_jp = set(e['jp'] for e in entries)
+for m in missed:
+    ko = jp2ko.get(m['jp'])
+    if ko is None or ko == m['jp'] or m['jp'] in seen_jp:
         continue
-    ko = ko2[i]
-    if ko == m['jp']:
-        continue
+    seen_jp.add(m['jp'])
     entries.append({'jp': m['jp'], 'ko': ko, 'occ': m['occ'], 'budget': m['budget']})
-    if toks(m['jp']) != toks(ko): tokbad.append((i, m['jp'], ko))
-    if nlcount(m['jp']) != nlcount(ko): nlbad.append((i, repr(m['jp'][:30]), repr(ko[:30])))
+    if toks(m['jp']) != toks(ko): tokbad.append((m['id'], m['jp'], ko))
+    if nlcount(m['jp']) != nlcount(ko): nlbad.append((m['id'], repr(m['jp'][:30]), repr(ko[:30])))
 
 # validate budgets
 for e in entries:

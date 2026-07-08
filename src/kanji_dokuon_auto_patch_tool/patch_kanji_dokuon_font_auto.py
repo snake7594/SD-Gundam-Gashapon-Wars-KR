@@ -219,6 +219,7 @@ def draw_reading_cell(
     best_total_h = 0
 
     # 한글 한 음절은 23~24px도 들어가지만, 기종별 렌더 차이를 감안해 23부터 시도.
+    # 게임이 셀 오른쪽 끝을 살짝 클립하므로 폭 여유(CELL_SIZE-4)를 둔다.
     for size in range(23, 5, -1):
         font = load_font(font_path, size)
         bboxes = [draw.textbbox((0, 0), line, font=font, stroke_width=stroke_width) for line in lines]
@@ -226,7 +227,7 @@ def draw_reading_cell(
         heights = [b[3] - b[1] for b in bboxes]
         total_w = max(widths) if widths else 0
         total_h = sum(heights) + max(0, len(lines) - 1) * 1
-        if total_w <= CELL_SIZE - 2 and total_h <= CELL_SIZE - 2:
+        if total_w <= CELL_SIZE - 4 and total_h <= CELL_SIZE - 2:
             best_font = font
             best_bboxes = bboxes
             best_total_w = total_w

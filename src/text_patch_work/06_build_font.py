@@ -14,7 +14,7 @@ sys.path.insert(0, TOOL)
 import patch_kanji_dokuon_font_auto as T
 from pathlib import Path
 
-FONT = os.environ.get('KRFONT', r'C:\Windows\Fonts\malgun.ttf')
+FONT = os.environ.get('KRFONT', os.path.join(HERE, '..', 'fonts', 'NanumSquareNeocBd.ttf'))
 dol_path = Path(os.path.join(HERE, '..', 'sys', 'main.dol'))
 data = bytearray(dol_path.read_bytes())
 
@@ -81,7 +81,7 @@ for tex, items in sorted(draw_by_tex.items()):
             for xx in range(T.CELL_SIZE):
                 if cy + yy < info.height and cx + xx < info.width:
                     indices[cy + yy][cx + xx] = 0
-        mask = T.draw_reading_cell(glyph, FONT)
+        mask = T.draw_reading_cell(glyph, FONT, x_offset=-1)  # 좌1px 이동으로 우측 클립 방지
         ci = T.mask_to_c4_indices(mask)
         for yy in range(T.CELL_SIZE):
             for xx in range(T.CELL_SIZE):
