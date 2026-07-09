@@ -50,14 +50,22 @@ for n in col0names:
         SAFE.add(n)
 print('SAFE col0 (translatable):', sorted(SAFE))
 
-c0 = c1 = 0
+c0 = c1 = c2 = 0
 for r in rows[1:]:
     if len(r) < 2: continue
+    orig0 = r[0]
     # col1 display (all mapped)
     if r[1] in dm: r[1] = dm[r[1]]; c1 += 1
     # col0 only if SAFE and mapped
-    if r[0] in SAFE and r[0] in dm: r[0] = dm[r[0]]; c0 += 1
-print('col0 translated:', c0, 'col1 translated:', c1)
+    if orig0 in SAFE and orig0 in dm: r[0] = dm[orig0]; c0 += 1
+    # col2 fullname: for SAFE rows, replace any mapped name substring (e.g. surname after ・)
+    if orig0 in SAFE and len(r) > 2 and r[2]:
+        new2 = r[2]
+        for jp, ko in dm.items():
+            if jp in new2:
+                new2 = new2.replace(jp, ko)
+        if new2 != r[2]: r[2] = new2; c2 += 1
+print('col0 translated:', c0, 'col1 translated:', c1, 'col2 translated:', c2)
 
 new_plain = NL.encode('cp932').join(b','.join(enc(c) for c in r) for r in rows)
 assert len(new_plain) <= len(plain), (len(new_plain), len(plain))
