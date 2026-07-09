@@ -8,13 +8,13 @@
 
 1. **원본 ISO 준비** — 일본판 「SD Gundam Gashapon Wars」 (GGPJB2)
    - 원본 ISO CRC32: `D5F67251`
-2. **패치 적용** — 최신 패치 `SDGundamGashaponWars_KR_v2.1.xdelta`
+2. **패치 적용** — 최신 패치 `SDGundamGashaponWars_KR_v2.2.xdelta`
    - Windows: [Delta Patcher](https://github.com/marco-calautti/DeltaPatcher/releases) 로 원본 ISO + 패치 선택 → Apply
-   - 또는 커맨드라인: `xdelta3 -d -s "SD Gundam Gashapon Wars.iso" SDGundamGashaponWars_KR_v2.1.xdelta "SD Gundam Gashapon Wars (KR).iso"`
-3. **결과 확인** — v2.1 패치 후 ISO CRC32: `EE64177F`
+   - 또는 커맨드라인: `xdelta3 -d -s "SD Gundam Gashapon Wars.iso" SDGundamGashaponWars_KR_v2.2.xdelta "SD Gundam Gashapon Wars (KR).iso"`
+3. **결과 확인** — v2.2 패치 후 ISO CRC32: `117DC91C`
 4. Dolphin 등 게임큐브 에뮬레이터로 실행
 
-## 번역 범위 (v2.1)
+## 번역 범위 (v2.2)
 
 **한글화 완료**
 - 📜 **스토리·튜토리얼 대사** 전량 (미션 시나리오, ~1,300줄)
@@ -26,8 +26,8 @@
 - 🖼️ **메뉴 라벨 이미지** — 모드 선택/싱글·멀티 플레이/옵션/진동/사운드 설정/메모리 카드 (텍스처 직접 한글화)
 - 🎚️ **룰 설정 라벨 이미지** — 지형(지상·수중·우주·공중), 시간/일수 설정, 난이도(약함~뉴타입·쉬움~엄청 어려움), 아이템 출현·기믹·아군 히트·가위바위보·COM 레벨·하이드·카드·기본값으로·클리어 타임·쓰러뜨린 적 수 등 (bank113/114/118)
 - 🏆 **미션 조건·기타 라벨 이미지** — 100% 유닛 생환/100% 점령/100% 거점 점령, 포격, 랜덤 맵 로고 (bank101/106/110/111/118)
-- 🅰️ **대형 메뉴 타이틀 이미지** — 모드 선택/싱글 플레이/멀티 플레이/옵션/시나리오 게임/도움말/사운드 플레이어/진동/사운드 설정/메모리 카드 (bank102, 368×74)
 - 🔤 **본문 폰트를 나눔스퀘어 네오 Bold로 교체** — 가독성 향상, 우측 클립 수정
+  - ※ 대형 메뉴 타이틀 이미지(bank102 368×74)는 v2.1에서 시도했으나 인게임 표시 문제로 v2.2에서 원복했습니다.
 
 **미번역 (구조적 한계)**
 - 🎨 일부 대형 로고·연출 그래픽(타이틀·랜덤 맵 등)은 **커스텀 스프라이트 포맷**이라 추가 작업 진행 중
